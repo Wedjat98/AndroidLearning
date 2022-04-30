@@ -14,6 +14,9 @@ public class subMainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_submain);
         TextView textView = findViewById(R.id.subText);
-        textView.setText("haha");
+        TextView textView2 = findViewById(R.id.subText2);
+        textView.setText("@小猪猪拉屎真厉害！");
+        textView2.setText("@小猪猪拉屎真厉害！");
+        textView.setTextColor(0xff3ddc84);
     }
 }
