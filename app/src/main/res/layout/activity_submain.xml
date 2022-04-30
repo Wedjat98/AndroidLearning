@@ -14,9 +14,24 @@
         android:textSize="50sp"/>
     <TextView
         android:id="@+id/subText2"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/TextDemo"
+        android:textSize="50sp"
+        android:textColor="#e79844"
+        android:background="@color/teal_700" />
+    <TextView
+        android:id="@+id/subTextBackgroundColor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/TextDemo"
-        android:textSize="50sp"
-        android:textColor="#e79844" />
+        android:textSize="50sp" />
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="233dp"
+        android:layout_height="101dp"
+        android:text="@string/BtnText"
+        android:textSize="30sp" />
+
 </LinearLayout>

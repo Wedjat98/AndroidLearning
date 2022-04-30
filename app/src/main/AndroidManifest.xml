@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.JavaDemoApp">
         <activity
+            android:name=".subMainActivity3"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -18,7 +21,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".subMainActivity"/>
+        <activity android:name=".subMainActivity" />
+        <activity android:name=".subMainActivity2" />
     </application>
 
 </manifest>
