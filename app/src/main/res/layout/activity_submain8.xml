@@ -1,6 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="vertical"
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    >
+
+    <LinearLayout
+        android:layout_marginTop="200dp"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="40dp">
+
+
+
+        <Button
+            android:id="@+id/enableButton"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:text="@string/BtnText" />
+
+        <Button
+            android:id="@+id/disableButton"
+            android:layout_width="150dp"
+            android:layout_height="49dp"
+            android:text="@string/BtnText" />
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/BigButton"
+        android:layout_marginTop="30dp"
+        android:layout_width="300dp"
+        android:layout_height="88dp"
+        android:layout_gravity="center"
+        android:text="@string/BtnText" />
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/textResult"
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="27sp"
+        android:text="@string/TextDemo2" />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="233dp"
+        android:layout_height="101dp"
+        android:text="@string/BtnText"
+        android:layout_gravity="center"
+        android:textSize="30sp" />
+
+</LinearLayout>

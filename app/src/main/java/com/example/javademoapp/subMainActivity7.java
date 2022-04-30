@@ -22,7 +22,7 @@ public class subMainActivity7 extends AppCompatActivity {
         nextButton.setText("点击这里");
         nextButton.setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(subMainActivity7.this, subMainActivity7.class);
+            intent.setClass(subMainActivity7.this, subMainActivity8.class);
             startActivity(intent);
         });
         Button timeButton = findViewById(R.id.timeBtn);
