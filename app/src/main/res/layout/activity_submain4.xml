@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bbffcc"
+        android:text="水平居中"
+        android:layout_centerHorizontal="true"
+        android:textSize="13sp"
+        />
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="@string/BtnText"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bbffcc"
+        android:text="垂直居中"
+        android:layout_centerVertical="true"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bbffcc"
+        android:text="上级左边对齐"
+        android:layout_alignParentStart="true"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bbffcc"
+        android:text="上级右边对齐"
+        android:layout_alignParentEnd="true"
+        android:textSize="13sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#bbffcc"
+        android:text="上级底边对齐"
+        android:layout_alignParentBottom="true"
+        android:textSize="13sp"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@id/btn"
+        android:layout_toStartOf="@id/btn"
+        android:background="#bbffcc"
+        android:text="在中间按钮左边"
+        android:textSize="13sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/btn"
+        android:layout_toEndOf="@id/btn"
+        android:background="#bbffcc"
+        android:text="在中间按钮右边"
+        android:textSize="13sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/btn"
+        android:layout_alignStart="@id/btn"
+        android:background="#bbffcc"
+        android:text="在中间按钮上面"
+        android:textSize="13sp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btn"
+        android:layout_alignEnd="@id/btn"
+        android:background="#bbffcc"
+        android:text="在中间按钮下面"
+        android:textSize="13sp" />
+</RelativeLayout>
