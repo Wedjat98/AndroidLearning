@@ -9,9 +9,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.JavaDemoApp">
-        <activity
-            android:name=".subMainActivity3"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -23,7 +21,12 @@
         </activity>
         <activity android:name=".subMainActivity" />
         <activity android:name=".subMainActivity2" />
+        <activity
+            android:name=".subMainActivity3"
+            android:exported="false" />
         <activity android:name=".subMainActivity4" />
+        <activity android:name=".subMainActivity5" />
+        <activity android:name=".subMainActivity6" />
     </application>
 
 </manifest>
