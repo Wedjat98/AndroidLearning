@@ -24,13 +24,10 @@ public class subMainActivity extends AppCompatActivity {
         textBC.setBackgroundResource(R.color.teal_200);//resource colors.xml colors
         textView.setTextColor(0xff3ddc84);
         Button button = findViewById(R.id.btn);
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent();
-                intent.setClass(subMainActivity.this,subMainActivity2.class);
-                startActivity(intent);
-            }
+        button.setOnClickListener(view -> {
+            Intent intent = new Intent();
+            intent.setClass(subMainActivity.this,subMainActivity2.class);
+            startActivity(intent);
         });
     }
 }

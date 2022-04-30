@@ -1,26 +1,22 @@
 package com.example.javademoapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class subMainActivity8 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Log.d("AdminMSG","onCreate");
-
-
+        setContentView(R.layout.activity_submain6);
         Button button = findViewById(R.id.btn);
+        button.setText("点击这里");
         button.setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(MainActivity.this,subMainActivity.class);
+            intent.setClass(subMainActivity8.this, subMainActivity7.class);
             startActivity(intent);
         });
     }

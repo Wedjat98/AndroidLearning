@@ -2,5 +2,5 @@
     <string name="app_name">JavaDemoApp</string>
     <string name="TextDemo">Hello Android!Getting start!</string>
     <string name="TextDemo2">你好，安卓!</string>
-    <string name="BtnText">点击这里!</string>
+    <string name="BtnText">Click Here!</string>
 </resources>

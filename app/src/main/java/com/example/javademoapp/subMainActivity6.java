@@ -16,7 +16,7 @@ public class subMainActivity6 extends AppCompatActivity {
         button.setText("点击这里");
         button.setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(subMainActivity6.this, subMainActivity6.class);
+            intent.setClass(subMainActivity6.this, subMainActivity7.class);
             startActivity(intent);
         });
     }

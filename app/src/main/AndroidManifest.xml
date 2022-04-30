@@ -27,6 +27,8 @@
         <activity android:name=".subMainActivity4" />
         <activity android:name=".subMainActivity5" />
         <activity android:name=".subMainActivity6" />
+        <activity android:name=".subMainActivity7" />
+        <activity android:name=".subMainActivity8" />
     </application>
 
 </manifest>

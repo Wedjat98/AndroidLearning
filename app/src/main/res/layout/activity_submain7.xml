@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/result"
+        android:text="@string/TextDemo2"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:textSize="30sp">
+
+    </TextView>
+
+    <Button
+        android:id="@+id/btn"
+        android:layout_width="233dp"
+        android:layout_height="108dp"
+        android:layout_gravity="center"
+        android:text="@string/BtnText"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/timeBtn"
+        android:layout_width="233dp"
+        android:layout_height="101dp"
+        android:text="@string/BtnText"
+        android:layout_gravity="center"
+        android:textSize="30sp" />
+
+    <Button
+        android:id="@+id/longBtn"
+        android:layout_width="233dp"
+        android:layout_height="101dp"
+        android:text="@string/BtnText"
+        android:layout_gravity="center"
+        android:textSize="30sp" />
+
+
+</LinearLayout>
