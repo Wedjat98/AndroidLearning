@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import java.math.BigInteger;
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private TextView screen;
@@ -67,6 +69,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 clean();
                 break;
             case R.id.btn_delete:
+                delete();
                 break;
 
             case R.id.btn_plus:
@@ -74,17 +77,29 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btn_cross:
             case R.id.btn_device:
                 operator = inputText;
-                refreshText(showResult + operator);
+                refreshText(showResult.toUpperCase() + operator);
                 break;
             case R.id.btn_equal:
-                double calculate_result = calculateFour();
+                int calculate_result = calculateFour();
+                refreshOperate(convertToHex(calculate_result));
+                refreshText(showResult.toUpperCase() + "=" + result.toUpperCase());
                 break;
 
             case R.id.btn_DEC:
+                String decResult = hex2dec(firstNum);
+                refreshOperate(decResult);
+                refreshText(showResult.toUpperCase() + " to DEC is " + result.toUpperCase());
                 break;
             case R.id.btn_BIN:
+                String binResult = hex2bin(firstNum);
+                refreshOperate(binResult);
+                refreshText(showResult.toUpperCase() + " to BIN is " + result.toUpperCase());
                 break;
             default:
+                if (result.length() > 0 && operator.equals("")) {
+                    clean();
+                }
+
                 if (operator.equals("")) {
                     firstNum = firstNum + inputText;
                 } else {
@@ -99,12 +114,25 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
     }
 
-    private double calculateFour() {
+    private void delete() {
+        String screenText = screen.getText().toString();
+        StringBuilder delete_result = new StringBuilder(screenText);
+        StringBuilder showDelete = delete_result.delete(screenText.length() - 1, screenText.length());
+        showResult = String.valueOf(showDelete);
+        screen.setText(showResult);
+    }
+
+    private int calculateFour() {
         switch (operator) {
             case "+":
-                ;
+                return (convertToInt(firstNum) + convertToInt(secondNum));
+            case "-":
+                return (convertToInt(firstNum) - convertToInt(secondNum));
+            case "×":
+                return (convertToInt(firstNum) * convertToInt(secondNum));
+            default:
+                return (convertToInt(firstNum) / convertToInt(secondNum));
         }
-        return 0;
     }
 
     private void clean() {
@@ -122,7 +150,26 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private void refreshText(String text) {
         showResult = text;
-        screen.setText(showResult);
+        screen.setText(showResult.toUpperCase());
 
+    }
+
+    int convertToInt(String s) {
+        return Integer.parseInt(s, 16);
+    }
+
+    String convertToHex(int i) {
+        return Integer.toHexString(i);
+    }
+
+    String hex2dec(String hexString) {
+        BigInteger sInt = new BigInteger(hexString, 16);
+        return sInt.toString(10);
+    }
+
+    String hex2bin(String hexString) {
+        BigInteger sInt = new BigInteger(hexString, 16);
+        String result = sInt.toString(2);
+        return new StringBuilder(result).reverse().toString();
     }
 }
