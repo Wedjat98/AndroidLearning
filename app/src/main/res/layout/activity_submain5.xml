@@ -1,74 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:columnCount="3"
-    android:rowCount="3">
+    >
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="3"
+        android:rowCount="3">
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#ddcccc"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#ddcccc"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#C30853"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#C30853"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#46F2B6"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#46F2B6"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#2D72F9"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#2D72F9"
+            android:textSize="17sp" />
 
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#EBBB15"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#EBBB15"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#80146A"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#80146A"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#DAD961"
-        android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#DAD961"
+            android:textSize="17sp" />
 
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#801F0A"
-        android:textSize="17sp" />
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#7ADD00"
-        android:textSize="17sp" />
-    <TextView
-        android:layout_width="120dp"
-        android:layout_height="120dp"
-        android:background="#007ADD00"
-        android:textSize="17sp" />
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="120dp"
-        android:layout_height="60dp"
-        android:text="@string/BtnText"
-        android:textSize="17sp"
-        />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#801F0A"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#7ADD00"
+            android:textSize="17sp" />
+        <TextView
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:background="#007ADD00"
+            android:textSize="17sp" />
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:text="@string/BtnText"
+            android:textSize="17sp"
+            />
+    </GridLayout>
 
-</GridLayout>
+
+</LinearLayout>
