@@ -2,6 +2,7 @@ package com.example.widgets;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -54,6 +55,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_equal).setOnClickListener(this);
     }
 
+    @SuppressLint("NonConstantResourceId")
     @Override
     public void onClick(View view) {
         String inputText;
@@ -99,7 +101,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if (result.length() > 0 && operator.equals("")) {
                     clean();
                 }
-
                 if (operator.equals("")) {
                     firstNum = firstNum + inputText;
                 } else {
@@ -117,11 +118,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private void delete() {
         String screenText = screen.getText().toString();
         StringBuilder delete_result = new StringBuilder(screenText);
-        StringBuilder showDelete = delete_result.delete(screenText.length() - 1, screenText.length());
-        showResult = String.valueOf(showDelete);
-        screen.setText(showResult);
+        if (screenText.length() - 1>=0){
+            StringBuilder showDelete = delete_result.delete(screenText.length() - 1, screenText.length());
+            showResult = String.valueOf(showDelete);
+            screen.setText(showResult);
+        }else {
+            clean();
+        }
     }
 
+    @SuppressLint("SetTextI18n")
     private int calculateFour() {
         switch (operator) {
             case "+":
@@ -130,8 +136,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 return (convertToInt(firstNum) - convertToInt(secondNum));
             case "×":
                 return (convertToInt(firstNum) * convertToInt(secondNum));
+            case "÷":
+                if (convertToInt(secondNum)==0){
+                    return 0;
+                }else return (convertToInt(firstNum) / convertToInt(secondNum));
             default:
-                return (convertToInt(firstNum) / convertToInt(secondNum));
+                return convertToInt(firstNum);
         }
     }
 
@@ -155,7 +165,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     int convertToInt(String s) {
-        return Integer.parseInt(s, 16);
+        try {
+            if (s.equals("")){
+                return 0;
+            }else return Integer.parseInt(s, 16);
+        }catch (Exception e){
+            clean();
+            return 0;
+        }
     }
 
     String convertToHex(int i) {
@@ -163,13 +180,33 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     String hex2dec(String hexString) {
-        BigInteger sInt = new BigInteger(hexString, 16);
-        return sInt.toString(10);
+        try {
+            if (hexString.length()>20){
+                clean();
+                return "";
+            }
+            BigInteger sInt = new BigInteger(hexString, 16);
+            return sInt.toString(10);
+        }catch (Exception e){
+            clean();
+            return "";
+        }
     }
 
     String hex2bin(String hexString) {
-        BigInteger sInt = new BigInteger(hexString, 16);
-        String result = sInt.toString(2);
-        return new StringBuilder(result).reverse().toString();
+        try {
+            if (hexString.length()>20){
+                clean();
+                return "";
+            }
+            BigInteger sInt = new BigInteger(hexString, 16);
+            String result = sInt.toString(2);
+            return new StringBuilder(result).reverse().toString();
+
+        }catch (Exception e){
+            clean();
+            return "";
+        }
+
     }
 }
