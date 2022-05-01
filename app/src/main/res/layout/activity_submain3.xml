@@ -15,12 +15,12 @@
         android:background="#ff0000"
         android:layout_gravity="bottom"
         android:gravity="left"
-        >
+        tools:ignore="RtlHardcoded">
+
         <View
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:background="@color/teal_200"
-            ></View>
+            android:background="@color/teal_200" />
 
     </LinearLayout>
     <Button
@@ -41,7 +41,8 @@
         android:padding="10dp"
         android:background="#ff0000"
         android:gravity="right"
-        android:layout_gravity="top">
+        android:layout_gravity="top"
+        tools:ignore="RtlHardcoded">
 
         <View
             android:layout_width="100dp"

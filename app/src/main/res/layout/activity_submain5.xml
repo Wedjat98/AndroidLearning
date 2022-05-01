@@ -58,11 +58,17 @@
         android:layout_height="120dp"
         android:background="#7ADD00"
         android:textSize="17sp" />
+    <TextView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:background="#007ADD00"
+        android:textSize="17sp" />
     <Button
         android:id="@+id/btn"
         android:layout_width="120dp"
         android:layout_height="60dp"
         android:text="@string/BtnText"
+        android:textSize="17sp"
         />
 
 </GridLayout>

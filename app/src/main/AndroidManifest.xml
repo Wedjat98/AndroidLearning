@@ -29,6 +29,7 @@
         <activity android:name=".subMainActivity6" />
         <activity android:name=".subMainActivity7" />
         <activity android:name=".subMainActivity8" />
+        <activity android:name=".subMainActivity9" />
     </application>
 
 </manifest>

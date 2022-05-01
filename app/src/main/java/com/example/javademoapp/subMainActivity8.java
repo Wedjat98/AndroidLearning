@@ -35,7 +35,7 @@ public class subMainActivity8 extends AppCompatActivity implements View.OnClickL
 
         button.setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(subMainActivity8.this, subMainActivity8.class);
+            intent.setClass(subMainActivity8.this, subMainActivity9.class);
             startActivity(intent);
         });
 
