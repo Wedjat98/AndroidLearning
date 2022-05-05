@@ -7,6 +7,8 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.javademoapp.ui.login.LoginActivity;
+
 public class subMainActivity9 extends AppCompatActivity {
 
     @Override
@@ -16,7 +18,7 @@ public class subMainActivity9 extends AppCompatActivity {
         Button button = findViewById(R.id.btn);
         button.setOnClickListener(view -> {
             Intent intent = new Intent();
-            intent.setClass(subMainActivity9.this, subMainActivity9.class);
+            intent.setClass(subMainActivity9.this,LoginActivity.class);
             startActivity(intent);
         });
     }
