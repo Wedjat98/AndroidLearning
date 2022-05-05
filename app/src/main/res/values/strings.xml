@@ -12,4 +12,8 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="wechat">微信</string>
+    <string name="qq">QQ</string>
+    <string name="weibo">微博</string>
+    <string name="qrcode">扫码</string>
 </resources>
